@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contador de Caracteres</title>
+</head>
+<body>
+  <h1>Contador de Caracteres</h1>
+  <input type="text" id="inputText" placeholder="Digite algo aqui..." />
+  <button>Enviar </button>
+  <p>Abra o console do navegador para ver a contagem de caracteres enquanto digita.</p>
+
+  <script>
+    const input = document.getElementById('inputText');
+
+    input.addEventListener('keyup', () => {
+      const len = input.value.length;
+      console.log('Caracteres digitados: ' + len);
+    });
+  </script>
+</body>
+</html>
+

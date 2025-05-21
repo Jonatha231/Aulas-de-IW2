@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Validação de Email com onblur</title>
+</head>
+<body>
+  <h1>Campo de Email</h1>
+
+  <label for="emailInput">Email:</label><br />
+  <input type="email" id="emailInput" placeholder="Digite seu email" onblur="verificarEmail()" /><br />
+  <p id="mensagem" style="color: red; display: none;">O email é obrigatório.</p>
+
+  <script>
+    function verificarEmail() {
+      const emailInput = document.getElementById('emailInput');
+      const mensagem = document.getElementById('mensagem');
+
+      if (emailInput.value.trim() === '') {
+        mensagem.style.display = 'block';
+      } else {
+        mensagem.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
